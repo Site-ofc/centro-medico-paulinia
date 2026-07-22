@@ -354,6 +354,13 @@
   img{transition:opacity .3s ease;}
   img[loading="lazy"]{opacity:0;}
   img[loading="lazy"].loaded{opacity:1;}
+
+  .mobile-only { display: none !important; }
+  @media(max-width: 640px) {
+    .desktop-only { display: none !important; }
+    .mobile-only { display: block !important; }
+  }
+
 </style>
 </head>
 <body>
