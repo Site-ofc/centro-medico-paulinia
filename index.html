@@ -356,15 +356,18 @@
   img[loading="lazy"].loaded{opacity:1;}
 
   /* ===== HERO CAPAS ===== */
-  section.hero{ min-height:100vh; justify-content:flex-start; }
-  .hero-media{ position:relative; inset:auto; overflow:visible; }
-  .hero-media .bg-sharp{ position:relative; filter:none; object-position:center; }
+  section.hero{
+    min-height:100vh; position:relative; overflow:hidden;
+    display:flex; align-items:center; justify-content:center;
+  }
+  .hero-media{ position:absolute; inset:0; overflow:hidden; }
   .hero-media::after{ display:none; }
-  .hero-capas-desktop{ width:100%; height:auto; min-height:100vh; object-fit:cover; }
+  .hero-media .bg-sharp{ position:relative; inset:auto; filter:none; }
+  .hero-capas-desktop{ width:100%; height:100%; object-fit:cover; object-position:center; }
   .hero-capas-mobile{ display:none; }
   @media(max-width:900px){
     .hero-capas-desktop{ display:none; }
-    .hero-capas-mobile{ display:block; width:100%; height:auto; min-height:100vh; object-fit:cover; }
+    .hero-capas-mobile{ display:block; width:100%; height:100%; object-fit:cover; object-position:center; }
   }
 </style>
 </head>
@@ -372,7 +375,7 @@
 
 <header class="masthead">
   <div class="masthead-inner">
-    <div class="brand"><img class="logo" src="images/logo-cmp.png" alt="Logo Centro Médico de Paulínia"><div class="name-group">Centro Médico de Paulínia <span class="tag">CMP</span></div></div>
+    <div class="brand"><img class="logo" src="images/logo-cmp-transparent.png" alt="Logo Centro Médico de Paulínia"><div class="name-group">Centro Médico de Paulínia <span class="tag">CMP</span></div></div>
     <nav class="index-nav" id="indexNav">
       <a href="#sobre">Sobre</a>
       <a href="#especialidades">Especialidades</a>
@@ -640,7 +643,7 @@
 
 <footer>
   <div class="wrap footer-inner">
-    <div class="brand"><img class="logo" src="images/logo-cmp.png" alt="Selo Centro Médico de Paulínia"><div class="name-group">Centro Médico de Paulínia <span class="tag">CMP</span></div></div>
+    <div class="brand"><img class="logo" src="images/logo-cmp-transparent.png" alt="Selo Centro Médico de Paulínia"><div class="name-group">Centro Médico de Paulínia <span class="tag">CMP</span></div></div>
     <div>Paulínia, SP — © 2026</div>
   </div>
 </footer>
